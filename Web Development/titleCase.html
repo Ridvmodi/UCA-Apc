@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title case</title>
+	<script>
+		var string = prompt("Enter the String");
+		var newString = "";
+		var flag = true;
+		document.writeln(string);
+		for(var i = 0;i<string.length;i++) {
+			if(string[i] != ' ') {
+				if(flag == true) {
+					newString += string.charAt(i).toUpperCase();
+				} else
+				newString += string.charAt(i);
+				flag = false;
+			} else {
+				if(flag == false)
+					flag = true;
+				newString += string.charAt(i)
+			}
+		}
+		document.writeln(newString);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var string = prompt("Enter the String");
+		var count = 0, preCount = 0, index = 0;
+		var flag = true;
+		for (var i = 0; i < string.length; i++) {
+			if(string[i] != ' '){
+				count++;
+				flag = false;
+			} else {
+				if(flag == false) {
+					if(count > preCount) {
+						preCount = count;
+						index = i - count;
+					}
+					count = 0;
+					flag = true;
+				}
+			}
+		}
+		for(var i = index;i<index + preCount;i++) 
+			document.write(string[i]);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

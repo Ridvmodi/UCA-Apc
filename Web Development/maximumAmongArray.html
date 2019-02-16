@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Maximum Among Array</title>
+	<script>
+		var array = [[1,2,3],[4,5,6],[7,8,9],[10,12,11]];
+		var max = -32768;
+		for(var i = 0;i<array.length;i++) {
+			for(var j = 0;j<array[i].length;j++) {
+				if((array[i])[j] > max) {
+					max = (array[i])[j];
+				}
+			}
+			document.writeln("Maximum element among " + array[i] + " is " + max);
+			document.write("<br>");
+			max = -32768;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
