@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		
+		window.onload = function(){
+			var parent = document.getElementById("content");
+			var input = document.getElementById("in");
+			input.onkeyup =  function(event) {
+				var ele = document.createElement("li");
+				ele.innerHTML = input.value;
+				if(event.keyCode == 13) {
+					parent.appendChild(ele);
+					input.value = "";
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<label for="name">Put Input</label>
+	<input type="text" id="in">
+	<ul id="content"></ul>
+	
+</body>
+</html>

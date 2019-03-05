@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDo</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #352335;
+			color: white;
+		}
+		div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		input {
+			display: block;
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			background-color: #74b9fd;
+			width: 100px;
+			height: 30px;
+			color: white;
+			border-radius: 5px;
+			outline: none;
+			cursor: pointer;
+		}
+		td {
+			margin: 15px;
+		}
+	</style>
+</head>
+<body>
+		
+
+	<div class="container">
+		<center>
+			<h2>To Do App</h2>
+			<label for="">Enter the Content: </label>
+			<input type="text" id="text">
+			<input type="submit" value="Submit" id="btn">
+		</center>
+		<table id="table">
+			<tr>
+				<td>S.No</td>
+				<td>Task</td>
+				<td>Date</td>
+				<td>Delete</td>
+			</tr>	
+		</table>
+	</div>
+	
+
+
+
+	<script src="todo.js"></script>
+</body>
+</html>
