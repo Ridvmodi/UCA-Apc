@@ -3,8 +3,18 @@ var productId = 1;
 var divAddProduct = document.getElementById("divAddProduct");
 var divListProducts = document.getElementById("divListProducts");
 var aAddProduct = document.getElementById("aAddProduct");
+var clearBtn = document.getElementById("clear");
+var data;
 
 
+if(getFromLocalStorage()) {
+
+	products = getFromLocalStorage();
+	for(var i = 0;i<products.length;i++) {
+		addProducttoDOM(products[i]);
+	}
+}
+ 
 aAddProduct.addEventListener("click", function(event) {  
     createNewProductPanel(); 
 	}
@@ -98,6 +108,8 @@ function addProducttoDOM(objProduct) {
 	insertBlankLine(divProduct);
 
 	unHideAddNewProductLink();
+	// localStorage.removeItem("Data");
+	putInLocalStorage();
 }
 
 // Given a product ID, returns the index to the product data in products. 
@@ -118,6 +130,9 @@ function getProductDetails(selectedProductIndex) {
 function removeFromProductsArray(selectedProductIndex) {
 	products.splice(selectedProductIndex,1);
 	console.log(products);
+	localStorage.removeItem("Data");
+	data = JSON.stringify(products);
+	localStorage.setItem("Data", data);
 }
 
 function deleteNewProductPanel() {
@@ -159,6 +174,7 @@ function editProductArray(selectedProductIndex) {
 	products[selectedProductIndex] = objProduct;
 	console.log(products[selectedProductIndex]);
 	editProducttoDOM(objProduct);
+	editLocalStorage();
     deleteNewProductPanel();
 }
 
@@ -241,3 +257,22 @@ function createNewProductPanel(selectedProductIndex) {
 function editProduct(selectedProductIndex) {
 	createNewProductPanel(selectedProductIndex);
 }
+function putInLocalStorage() {
+	data =  JSON.stringify(products);
+	localStorage.setItem("Data",data);
+}
+function getFromLocalStorage() {
+	data =  localStorage.getItem("Data");
+	return JSON.parse(data);
+}
+function editLocalStorage() {
+	data = JSON.stringify(products);
+	localStorage.setItem("Data", data);
+}
+
+clearBtn.addEventListener("click", function() {
+
+	localStorage.removeItem("Data");
+	products = [];
+	divListProducts.innerHTML = "";
+});
