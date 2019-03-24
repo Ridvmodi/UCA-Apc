@@ -275,4 +275,5 @@ clearBtn.addEventListener("click", function() {
 	localStorage.removeItem("Data");
 	products = [];
 	divListProducts.innerHTML = "";
+	productId = 1;
 });
