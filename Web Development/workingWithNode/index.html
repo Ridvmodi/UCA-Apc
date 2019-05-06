@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDo List</title>
+	<style>
+		html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #3C3B3F;
+            background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  
+            background: linear-gradient(to right, #605C3C, #3C3B3F);
+		}
+		select,input, button {
+			padding: 10px;
+			margin: 20px;
+		}
+		button {
+			width: 150px;
+			height: 40px;
+			border-radius: 5px;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+			top: 5px;
+		}
+		div {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<select id="name">
+			<option value="Ridhav">Ridhav</option>
+			<option value="Ridv">Ridv</option>
+			<option value="Ridhv">Ridhv</option>
+		</select>
+		<br>
+		<input type="text" placeholder="Enter your task" id="task">
+		<br>
+		<input type="text" placeholder="Enter file Name" id="file">
+		<br>
+		<button id="btn">Submit</button>
+		<br>
+		<button id="getFile1">1</button>
+		<br>
+		<button id="getFile2">2</button>
+	</div>
+	<div>
+		<ul>
+			
+		</ul>
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>

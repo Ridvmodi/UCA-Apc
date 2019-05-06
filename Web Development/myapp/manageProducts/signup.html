@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<style>
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background: #159957;
+            background: -webkit-linear-gradient(to right, #155799, #159957);
+            background: linear-gradient(to right, #155799, #159957);
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+		}
+		html {
+			width: 100%;
+			height: 100%;
+		}
+		input {
+			height: 20px;
+			padding: 8px;
+			width: 250px;
+			margin: 10px;
+			outline: none;
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid black;
+			color: white;
+		}
+		::placeholder {
+			color: white;
+		}
+		button {
+			border: none;
+			outline: none;
+			width: 100px;
+			height: 30px;
+			background-color: #03bbd3;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-top: 25px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%); 
+		}
+		button:active {
+			top: 3px;
+		}
+		p {
+			text-align: center;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="inner">
+			<input type="text" placeholder="Enter Your Name" id="name">
+			<br>
+			<input type="text" placeholder="Enter UserName" id="userName">
+			<br>
+			<input type="password" placeholder="Enter the Password" id="passwd">
+			<br>
+			<input type="password" placeholder="Re Enter Your PassWord" id="rePasswd">
+			<br>
+			<button id="btn">SignUp</button>
+		</div>
+		<p>Already having Account <a href="login.html">Login</a> here</p>
+	</div>
+
+	<script src="./signup.js"></script>
+</body>
+</html>
